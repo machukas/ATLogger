@@ -121,6 +121,6 @@ public struct ATLogger {
 	/// - Returns: El string listo para pintar
 	internal func formatOutput(text: String, sourceFile fileName: String, functionName: String, lineNumber: Int) -> String {
 		let className = (fileName as NSString).lastPathComponent
-		return "\(ATLogger.dateFormatter.string(from: Date())) [\(self.severity.description)] [\(functionName)] [\(className):\(lineNumber)]| \(text)"
+		return "\(ATLogger.dateFormatter.string(from: Date())) [\(self.severity.description)] [\(functionName.components(separatedBy: "(")[0])] [\(className):\(lineNumber)]| \(text)"
 	}
 }
