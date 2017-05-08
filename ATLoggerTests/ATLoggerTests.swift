@@ -38,12 +38,11 @@ class ATLoggerTests: XCTestCase {
 		let infoLogger = ATLogger(withLevel: .info)
 		
 		infoLogger.log("testWriteFormat")
-		var output = infoLogger.formatOutput(text: "testWriteFormat", sourceFile: "ATLoggerTests.swift", functionName: "testWriteFormat()", lineNumber: 40)
+		var output = infoLogger.formatOutput(text: "testWriteFormat", sourceFile: "ATLoggerTests.swift", functionName: "testWriteFormat", lineNumber: 40)
 
 		let range = output.startIndex..<output.index(output.startIndex, offsetBy: 20)
 		output.removeSubrange(range) // Quitar la fecha
-		
-		let testOutput = "[INFO] ATLoggerTests.swift->testWriteFormat() [#40]| testWriteFormat"
+		let testOutput = "[INFO] [testWriteFormat] [ATLoggerTests.swift:40]| testWriteFormat"
 		
 		XCTAssert(testOutput == output)
 	}

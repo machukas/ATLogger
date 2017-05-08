@@ -12,7 +12,7 @@ public struct ATLogger {
 	
 	internal static let dateFormatter: DateFormatter = {
 		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+		dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 		return dateFormatter
 	}()
 	
@@ -67,7 +67,7 @@ public struct ATLogger {
 		self.log(text, in: .error, evenInReleaseMode: writeAnyways)
 	}
 	
-	/// Registra en el log el texto especificado si el nivel pasado por parámetro es mayor o igual que el establecido al instanciar la clase.
+	/// Registra en el log el texto especificado. Si no se concreta el nivel de log, se tomará el utilizado al instanciar la clase.
 	///
 	/// - Parameters:
 	///   - text: Texto a registrar
@@ -121,6 +121,6 @@ public struct ATLogger {
 	/// - Returns: El string listo para pintar
 	internal func formatOutput(text: String, sourceFile fileName: String, functionName: String, lineNumber: Int) -> String {
 		let className = (fileName as NSString).lastPathComponent
-		return "\(ATLogger.dateFormatter.string(from: Date())) [\(self.severity.description)] \(className)->\(functionName) [#\(lineNumber)]| \(text)"
+		return "\(ATLogger.dateFormatter.string(from: Date())) [\(self.severity.description)] [\(functionName)] [\(className):\(lineNumber)]| \(text)"
 	}
 }
