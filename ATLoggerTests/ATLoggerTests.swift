@@ -37,7 +37,7 @@ class ATLoggerTests: XCTestCase {
 	func testWriteFormat() {
 		let infoLogger = ATLogger(withLevel: .info)
 		
-		infoLogger.log(.info, "testWriteFormat")
+		infoLogger.log("testWriteFormat")
 		var output = infoLogger.formatOutput(text: "testWriteFormat", sourceFile: "ATLoggerTests.swift", functionName: "testWriteFormat()", lineNumber: 40)
 
 		let range = output.startIndex..<output.index(output.startIndex, offsetBy: 20)
