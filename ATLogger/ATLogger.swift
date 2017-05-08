@@ -21,12 +21,19 @@ public struct ATLogger {
 	/// Modo de la aplicación
 	public let mode: AppMode
 	
+	private let showLevel: Bool
+	private let showFileName: Bool
+	private let showLineNumber: Bool
+	
 	///
 	///
 	/// - Parameters:
 	///   - severity: Nivel del log
 	///   - mode: Modo de la App, `nil` por defecto. Se autoconfigura con el flag 'DEBUG' del compilador si `nil`.
-	public init(withLevel severity: Severity, mode: AppMode? = nil) {
+	///   - showLevel: Si ha de mostrarse el nivel de log
+	///   - showFileNames: Si ha de mostrarse el nombre del fichero
+	///   - showLineNumbers: Si ha de mostrarse el número de línea
+	public init(withLevel severity: Severity, mode: AppMode? = nil, showLevel: Bool = true, showFileNames: Bool = true, showLineNumbers: Bool = true) {
 		self.severity = severity
 		
 		if mode == nil {
@@ -38,6 +45,10 @@ public struct ATLogger {
 		} else {
 			self.mode = mode!
 		}
+		
+		self.showLevel = showLevel
+		self.showFileName = showFileNames
+		self.showLineNumber = showLineNumbers
 	}
 	
 	// MARK:- API
@@ -121,6 +132,14 @@ public struct ATLogger {
 	/// - Returns: El string listo para pintar
 	internal func formatOutput(text: String, sourceFile fileName: String, functionName: String, lineNumber: Int) -> String {
 		let className = (fileName as NSString).lastPathComponent
-		return "\(ATLogger.dateFormatter.string(from: Date())) [\(self.severity.description)] [\(functionName.components(separatedBy: "(")[0])] [\(className):\(lineNumber)]| \(text)"
+		
+		var output = "\(ATLogger.dateFormatter.string(from: Date()))"
+		
+		output += self.showLevel ? " [\(self.severity.description)]" : ""
+		output += " [\(functionName.components(separatedBy: "(")[0])]"
+		output += self.showFileName ? " [\(className)" : ""
+		output += self.showLineNumber ? ":\(lineNumber)]|" : "]|"
+		
+		return "\(output) \(text)"
 	}
 }
