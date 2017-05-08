@@ -13,6 +13,7 @@
 		2EC151C71EC058B10065CB49 /* ATLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC151C61EC058B10065CB49 /* ATLogger.swift */; };
 		2EC151CA1EC059930065CB49 /* Severity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC151C91EC059930065CB49 /* Severity.swift */; };
 		2EC151CC1EC05E3C0065CB49 /* AppMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC151CB1EC05E3C0065CB49 /* AppMode.swift */; };
+		2EC151CE1EC08D1A0065CB49 /* ATLogger.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2EC151CD1EC08D1A0065CB49 /* ATLogger.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		2EC151C61EC058B10065CB49 /* ATLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLogger.swift; sourceTree = "<group>"; };
 		2EC151C91EC059930065CB49 /* Severity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Severity.swift; sourceTree = "<group>"; };
 		2EC151CB1EC05E3C0065CB49 /* AppMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMode.swift; sourceTree = "<group>"; };
+		2EC151CD1EC08D1A0065CB49 /* ATLogger.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATLogger.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2EC151AD1EC058460065CB49 /* ATLogger.h */,
 				2EC151AE1EC058460065CB49 /* Info.plist */,
+				2EC151CD1EC08D1A0065CB49 /* ATLogger.podspec */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC151CE1EC08D1A0065CB49 /* ATLogger.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
