@@ -55,27 +55,27 @@ public struct ATLogger {
 	
 	/// Función de ayuda, registra en el log con nivel `debug` usando la función `log(text:severity:evenInReleaseMode)`
 	public func debug(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
-		self.log(text, in: .debug, evenInReleaseMode: writeAnyways)
+		self.log(text, in: .debug, evenInReleaseMode: writeAnyways, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber)
 	}
 	
 	/// Función de ayuda, registra en el log con nivel `info` usando la función `log(text:severity:evenInReleaseMode)`
 	public func info(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
-		self.log(text, in: .info, evenInReleaseMode: writeAnyways)
+		self.log(text, in: .info, evenInReleaseMode: writeAnyways, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber)
 	}
 	
 	/// Función de ayuda, registra en el log con nivel `notice` usando la función `log(text:severity:evenInReleaseMode)`
 	public func notice(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
-		self.log(text, in: .notice, evenInReleaseMode: writeAnyways)
+		self.log(text, in: .notice, evenInReleaseMode: writeAnyways, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber)
 	}
 	
 	/// Función de ayuda, registra en el log con nivel `warning` usando la función `log(text:severity:evenInReleaseMode)`
 	public func warning(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
-		self.log(text, in: .warning, evenInReleaseMode: writeAnyways)
+		self.log(text, in: .warning, evenInReleaseMode: writeAnyways, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber)
 	}
 	
 	/// Función de ayuda, registra en el log con nivel `error` usando la función `log(text:severity:evenInReleaseMode)`
 	public func error(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
-		self.log(text, in: .error, evenInReleaseMode: writeAnyways)
+		self.log(text, in: .error, evenInReleaseMode: writeAnyways, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber)
 	}
 	
 	/// Registra en el log el texto especificado. Si no se concreta el nivel de log, se tomará el utilizado al instanciar la clase.
