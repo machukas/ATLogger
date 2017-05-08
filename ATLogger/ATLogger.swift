@@ -40,6 +40,42 @@ public struct ATLogger {
 		}
 	}
 	
+	// MARK:- API
+	
+	/// Función de ayuda, registra en el log con nivel `debug` usando la función `log(severity:text:evenInReleaseMode)`
+	public func debug(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+		self.log(.debug, text, evenInReleaseMode: writeAnyways)
+	}
+	
+	/// Función de ayuda, registra en el log con nivel `info` usando la función `log(severity:text:evenInReleaseMode)`
+	public func info(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+		self.log(.info, text, evenInReleaseMode: writeAnyways)
+	}
+	
+	/// Función de ayuda, registra en el log con nivel `notice` usando la función `log(severity:text:evenInReleaseMode)`
+	public func notice(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+		self.log(.notice, text, evenInReleaseMode: writeAnyways)
+	}
+	
+	/// Función de ayuda, registra en el log con nivel `warning` usando la función `log(severity:text:evenInReleaseMode)`
+	public func warning(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+		self.log(.warning, text, evenInReleaseMode: writeAnyways)
+	}
+	
+	/// Función de ayuda, registra en el log con nivel `error` usando la función `log(severity:text:evenInReleaseMode)`
+	public func error(_ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+		self.log(.error, text, evenInReleaseMode: writeAnyways)
+	}
+	
+	/// Registra en el log el texto especificado si el nivel pasado por parámetro es mayor o igual que el establecido al instanciar la clase.
+	///
+	/// - Parameters:
+	///   - severity: Nivel de log
+	///   - text: Texto a registrar
+	///   - writeAnyways: Si ha de escribirse aunque no se esté en modo debug
+	///   - fileName: Nombre del archivo que ejecuta este método
+	///   - functionName: Nombre de la función que ejecuta este método
+	///   - lineNumber: Número de linea del fichero donde está la función que ejecuta este método
 	public func log(_ severity: Severity? = nil, _ text: String, evenInReleaseMode writeAnyways: Bool = false, sourceFile fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
 		var severity = severity
 		if severity == nil { severity = self.severity }
