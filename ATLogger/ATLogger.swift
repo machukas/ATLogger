@@ -102,7 +102,7 @@ public struct ATLogger {
 	///
 	/// - Parameter text: Texto a escribir
 	internal func write(_ text: String, sourceFile fileName: String, functionName: String, lineNumber: Int) {
-		debugPrint(self.formatOutput(text: text, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber))
+		NSLog(self.formatOutput(text: text, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber))
 	}
 	
 	/// Establece las condiciones para que un mensaje sea escrito en el log
