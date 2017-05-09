@@ -1,3 +1,3 @@
 # ATLogger
 
-https://travis-ci.org/machukas/ATLogger.svg?branch=master
+![](https://travis-ci.org/machukas/ATParse.svg?branch=master)
