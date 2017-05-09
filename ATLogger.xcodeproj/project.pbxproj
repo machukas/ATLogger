@@ -14,6 +14,8 @@
 		2EC151CA1EC059930065CB49 /* Severity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC151C91EC059930065CB49 /* Severity.swift */; };
 		2EC151CC1EC05E3C0065CB49 /* AppMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC151CB1EC05E3C0065CB49 /* AppMode.swift */; };
 		2EC151CE1EC08D1A0065CB49 /* ATLogger.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2EC151CD1EC08D1A0065CB49 /* ATLogger.podspec */; };
+		2EC151D21EC1E6540065CB49 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2EC151D11EC1E6540065CB49 /* .travis.yml */; };
+		2EC151D41EC1E6910065CB49 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2EC151D31EC1E6910065CB49 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		2EC151C91EC059930065CB49 /* Severity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Severity.swift; sourceTree = "<group>"; };
 		2EC151CB1EC05E3C0065CB49 /* AppMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMode.swift; sourceTree = "<group>"; };
 		2EC151CD1EC08D1A0065CB49 /* ATLogger.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATLogger.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2EC151D11EC1E6540065CB49 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
+		2EC151D31EC1E6910065CB49 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				2EC151AD1EC058460065CB49 /* ATLogger.h */,
 				2EC151AE1EC058460065CB49 /* Info.plist */,
 				2EC151CD1EC08D1A0065CB49 /* ATLogger.podspec */,
+				2EC151D11EC1E6540065CB49 /* .travis.yml */,
+				2EC151D31EC1E6910065CB49 /* .gitignore */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -200,6 +206,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC151D21EC1E6540065CB49 /* .travis.yml in Resources */,
+				2EC151D41EC1E6910065CB49 /* .gitignore in Resources */,
 				2EC151CE1EC08D1A0065CB49 /* ATLogger.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +439,7 @@
 				2EC151C01EC058460065CB49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EC151C11EC058460065CB49 /* Build configuration list for PBXNativeTarget "ATLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +448,7 @@
 				2EC151C31EC058460065CB49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
