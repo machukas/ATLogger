@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ATLogger"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Simple logging library."
   s.description  = "This library makes it easy to log, with severity levels"
   s.homepage     = "http://EXAMPLE/ATParse"
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
+  s.xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   s.source       = { :git => 'https://github.com/machukas/ATLogger.git' }
 
