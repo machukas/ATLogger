@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ATLogger"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Simple logging library."
   s.description  = "This library makes it easy to log, with severity levels"
   s.homepage     = "http://EXAMPLE/ATParse"
