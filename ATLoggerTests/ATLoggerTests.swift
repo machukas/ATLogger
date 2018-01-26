@@ -22,8 +22,20 @@ class ATLoggerTests: XCTestCase {
     }
     
     func testShouldWrite() {
+		let debugLogger = ATLogger(withLevel: .debug)
 		let infoLogger = ATLogger(withLevel: .info)
-		let releaseLogger = ATLogger(withLevel: .error, mode: .release)
+		let noticeLogger = ATLogger(withLevel: .notice)
+		let warningLogger = ATLogger(withLevel: .warning)
+		let errorLogger = ATLogger(withLevel: .error)
+		let releaseLogger = ATLogger(withLevel: .error, mode: .release, showLevel: false, showFileNames: false, showLineNumbers: false)
+		
+		debugLogger.debug("")
+		infoLogger.info("")
+		noticeLogger.notice("")
+		warningLogger.warning("")
+		errorLogger.error("")
+		
+		releaseLogger.log("")
 		
 		XCTAssert(infoLogger.shouldWrite(inSeverityLevel: .info, evenInReleaseMode: false))
 		
@@ -45,5 +57,9 @@ class ATLoggerTests: XCTestCase {
 		let testOutput = "[INFO] [testWriteFormat] [ATLoggerTests.swift:40]| testWriteFormat"
 		
 		XCTAssert(testOutput == output)
+	}
+	
+	func testAPIs() {
+		
 	}
 }
